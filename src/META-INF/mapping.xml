@@ -6,7 +6,7 @@
           version="1.0">
 
     <description> XML Mapping file</description>
-    <entity>
+    <entity class="com.tutorialspoint.eclipselink.entity.Employee">
         <table name="EMPLOYEETABLE"/>
         <attributes>
             <id name="eid">
