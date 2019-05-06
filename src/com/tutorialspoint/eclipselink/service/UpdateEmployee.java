@@ -8,7 +8,7 @@ import com.tutorialspoint.eclipselink.entity.Employee;
 public class UpdateEmployee {
 
     public static void main(String[] args) {
-        EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("Eclipse_JPA");
+        EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("Eclipselink_JPA");
         EntityManager entityManager = emFactory.createEntityManager();
         entityManager.getTransaction().begin();
 

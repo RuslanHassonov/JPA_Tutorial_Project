@@ -7,18 +7,48 @@
 
     <description> XML Mapping file</description>
     <entity class="com.tutorialspoint.eclipselink.entity.Employee">
-        <table name="EMPLOYEETABLE"/>
+    <table name="EMPLOYEETABLE"/>
+    <attributes>
+        <id name="eid">
+            <generated-value strategy="TABLE"/>
+        </id>
+        <basic name="ename">
+            <column name="EMP_NAME" length="100"/>
+        </basic>
+        <basic name="salary">
+        </basic>
+        <basic name="deg">
+        </basic>
+    </attributes>
+    </entity>
+
+    <entity class="com.tutorialspoint.eclipselink.entity.Staff">
+        <table name="STAFFTABLE"/>
         <attributes>
-            <id name="eid">
+            <id name="sid">
                 <generated-value strategy="TABLE"/>
             </id>
-            <basic name="ename">
-                <column name="EMP_NAME" length="100"/>
-            </basic>
-            <basic name="salary">
-            </basic>
-            <basic name="deg">
+            <basic name="sname">
             </basic>
         </attributes>
     </entity>
+
+    <entity class="com.tutorialspoint.eclipselink.entity.TeachingStaff">
+        <table name="STAFFTABLE"/>
+        <attributes>
+            <basic name="qualification">
+            </basic>
+            <basic name="subjectexpertise">
+            </basic>
+        </attributes>
+    </entity>
+
+    <entity class="com.tutorialspoint.eclipselink.entity.NonTeachingStaff">
+        <table name="STAFFTABLE"/>
+        <attributes>
+            <basic name="areaOfExpertise">
+            </basic>
+        </attributes>
+    </entity>
+
 </entity-mappings>
